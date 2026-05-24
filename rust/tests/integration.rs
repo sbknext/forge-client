@@ -1,4 +1,4 @@
-use forge::{Forge, ForgeError};
+use sbknext_forge::{Forge, ForgeError};
 use mockito::Server;
 use serde_json::json;
 

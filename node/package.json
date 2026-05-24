@@ -1,9 +1,9 @@
 {
-  "name": "@sbknext/forge",
+  "name": "@sbkolate/forge",
   "version": "0.1.0",
   "description": "Node.js SDK for corebrain MCP server",
   "license": "MIT",
-  "author": "Sambhaji Kolate <kolate.sambhaji@gmail.com>",
+  "author": "Sambhaji Kolate <erp@sbknext.com>",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
@@ -46,5 +46,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sbknext/forge-client.git"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/sbknext/forge-client/issues"
+  },
+  "homepage": "https://github.com/sbknext/forge-client#readme"
 }

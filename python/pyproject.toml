@@ -1,3 +1,7 @@
+# TODO: PyPI publish blocked — 2FA not yet enabled on pypi.org account.
+# Once 2FA is set up, generate an API token and run: cd python && python -m twine upload dist/*
+# Source install works now: pip install git+https://github.com/sbknext/forge-client.git#subdirectory=python
+
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
@@ -9,7 +13,7 @@ description = "Python SDK + CLI for corebrain MCP server"
 readme = "README.md"
 license = { text = "MIT" }
 requires-python = ">=3.9"
-authors = [{ name = "Sambhaji Kolate", email = "kolate.sambhaji@gmail.com" }]
+authors = [{ name = "Sambhaji Kolate", email = "erp@sbknext.com" }]
 keywords = ["mcp", "ai", "brain", "client", "corebrain", "forge"]
 classifiers = [
     "Development Status :: 3 - Alpha",

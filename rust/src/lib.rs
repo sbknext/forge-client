@@ -3,9 +3,9 @@
 //! Rust SDK for the [corebrain](https://mcp.sbknext.com) MCP server.
 //!
 //! ```no_run
-//! use forge::Forge;
+//! use sbknext_forge::Forge;
 //!
-//! # fn main() -> forge::Result<()> {
+//! # fn main() -> sbknext_forge::Result<()> {
 //! let f = Forge::new("sk-...")?;
 //! f.memory().save("solo devs ship like teams", Some(&["thesis"]))?;
 //! let hits = f.memory().search("solo dev thesis", 5)?;

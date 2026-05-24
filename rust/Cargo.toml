@@ -1,12 +1,12 @@
 [package]
-name = "forge"
+name = "sbknext-forge"
 version = "0.1.0"
 edition = "2021"
 description = "Rust SDK for corebrain MCP server"
 license = "MIT"
-authors = ["Sambhaji Kolate <kolate.sambhaji@gmail.com>"]
+authors = ["Sambhaji Kolate <erp@sbknext.com>"]
 repository = "https://github.com/sbknext/forge-client"
-keywords = ["mcp", "ai", "brain", "corebrain", "forge"]
+keywords = ["mcp", "ai", "forge", "claude", "corebrain"]
 categories = ["api-bindings"]
 readme = "README.md"
 
