@@ -1,30 +1,34 @@
 # forge — Rust SDK
 
-Rust SDK for [corebrain](https://mcp.sbknext.com) MCP server.
+Part of [forge-client](../README.md). Start at **[mcp.sbknext.com](https://mcp.sbknext.com)** for a token.
+
+---
 
 ## Install
 
+Crates.io publish coming soon. Use via git today:
+
 ```toml
 [dependencies]
-forge = "0.1"
+forge = { git = "https://github.com/sbknext/forge-client", package = "forge" }
 ```
 
-## Quickstart (15 LOC)
+## Quickstart
 
 ```rust
 use forge::Forge;
 
 fn main() -> forge::Result<()> {
-    let f = Forge::builder()
-        .api_key(std::env::var("FORGE_API_KEY").unwrap())
+    let forge = Forge::builder()
+        .token(std::env::var("FORGE_TOKEN").unwrap())
         .build()?;
 
-    f.memory().save("Solo devs ship like teams", Some(&["thesis"]))?;
-    let hits = f.memory().search("solo dev", 5)?;
+    forge.memory().save("Sprint 23 retro: ship docs first.", None)?;
+    let hits = forge.memory().search("docs first", 5)?;
     println!("{:#}", hits);
 
-    let tools = f.tools_list()?;
-    println!("{} tools", tools.len());
+    let tools = forge.tools_list()?;
+    println!("{} tools available", tools.len());
     Ok(())
 }
 ```

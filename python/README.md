@@ -1,11 +1,13 @@
 # forge — Python SDK
 
-Python SDK + CLI for [corebrain](https://mcp.sbknext.com) MCP server.
+Part of [forge-client](../README.md). Start at **[mcp.sbknext.com](https://mcp.sbknext.com)** for a token.
+
+---
 
 ## Install
 
 ```bash
-pip install forge-client
+pip install sbknext-forge
 ```
 
 ## Quickstart
@@ -13,10 +15,10 @@ pip install forge-client
 ```python
 from forge import Forge
 
-with Forge(api_key="sk-...") as f:
-    f.memory.save("Sambhaji ships solo via Sonnet sub-agents", tags=["thesis"])
-    hits = f.memory.search("solo dev thesis", limit=5)
-    print(hits)
+forge = Forge(token="...")            # or os.getenv("FORGE_TOKEN")
+forge.memory.save("Sprint 23 retro: ship docs first.", tags=["retro"])
+hits = forge.memory.search("docs first", limit=5)
+print(hits)
 ```
 
 Async:
@@ -24,9 +26,9 @@ Async:
 ```python
 from forge import AsyncForge
 
-async with AsyncForge(api_key="sk-...") as f:
-    await f.memory.save("async note")
-    print(await f.memory.list(limit=10))
+async with AsyncForge(token="...") as forge:
+    await forge.memory.save("async note")
+    print(await forge.memory.list(limit=10))
 ```
 
 ## CLI

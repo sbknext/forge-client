@@ -1,29 +1,30 @@
-# @sbknext/forge — Node SDK
+# @sbkolate/forge — Node SDK
 
-Node.js / TypeScript SDK for [corebrain](https://mcp.sbknext.com) MCP server.
+Part of [forge-client](../README.md). Start at **[mcp.sbknext.com](https://mcp.sbknext.com)** for a token.
+
+---
 
 ## Install
 
 ```bash
-npm install @sbknext/forge
+npm install @sbkolate/forge
 ```
 
-## Quickstart (15 LOC)
+Note: npm scope is `sbkolate` (no npm org yet).
+
+## Quickstart
 
 ```ts
-import { Forge } from "@sbknext/forge";
+import { Forge } from "@sbkolate/forge";
 
-const f = new Forge({ apiKey: process.env.FORGE_API_KEY });
+const forge = new Forge({ token: process.env.FORGE_TOKEN });
 
-await f.memory.save("Solo devs ship like teams with Sonnet sub-agents", {
-  tags: ["thesis"],
-});
-
-const hits = await f.memory.search("solo dev thesis", 5);
+await forge.memory.save("Sprint 23 retro: ship docs first.", { tags: ["retro"] });
+const hits = await forge.memory.search("docs first", 5);
 console.log(hits);
 
-const tools = await f.toolsList();
-console.log(`Server exposes ${tools.length} tools.`);
+const tools = await forge.toolsList();
+console.log(`${tools.length} tools available`);
 ```
 
 ESM and CJS dual-built. Node 18+ (native `fetch`).
